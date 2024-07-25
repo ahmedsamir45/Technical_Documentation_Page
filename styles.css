@@ -63,6 +63,8 @@ nav h3{
     width: fit-content;
     padding: 10px;
     border-radius: 10px;
+}
+@media (max-width:780) {
 
 }
 nav a {
@@ -125,14 +127,14 @@ section p {
 
 @media (max-width:770px){
     :root{
-        --width-nav:50px;
+        --width-nav:80px;
     }
     nav{
        width: var(--width-nav);
     }
 
     nav:hover{
-        width: 250px;
+        width: 60%;
     }
     nav a {
    
@@ -148,6 +150,12 @@ section p {
     }
     #main-doc{
         margin-left: var(--width-nav);
+    }
+    nav h3{
+     
+       font-size: 15px;
+       overflow: visible;
+       z-index: 23;
     }
 
 }
