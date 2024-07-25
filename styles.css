@@ -1,17 +1,24 @@
-body {
-    font-family: "Open Sans",sans-serif;
-    margin: 0;
-    background-color: #eee;
-    line-height: 1.7;
-}
-
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --width-nav:250px;
 }
 
+body {
+    font-family: "Open Sans",sans-serif;
+    background-color: #eee;
+
+}
+
+
 .page{
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #main-doc{
@@ -21,34 +28,52 @@ body {
 }
 
 nav{
-    width: 250px;
+    width: var(--width-nav);
     box-shadow: 0 0 10px #ddd;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
     background-color: white;
-    padding: 20px;
+    padding: 10px ;
+    overflow-y: auto;
 }
 
 
-nav h3 {
-    color:red ;
+.title {
+    color:rgb(60, 16, 255) ;
     font-size: 25px;
     text-align: center;
+    margin: 20px auto;
+    background-color: white;
+    width: fit-content;
+    padding: 20px;
 }
 
 #main-doc{
+    /* padding: 20px;
+    margin: 20px; */
+    margin-left: calc(var(--width-nav) + 10px);
     padding: 20px;
-    margin: 20px;
 }
+nav h3{
+    text-align: center;
+    margin: 10px auto;
+    background-color: #eee;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
 
+}
 nav a {
    
     display: block;
-    margin: 20px auto;
+    margin: 10px auto;
     text-align: center;
     text-decoration: none;
     padding: 20px;
     border-radius: 50px;
-    transition: 1s;
+    transition: .2s;
     color: black;
 }
 /* nav a:hover,  */
@@ -56,24 +81,87 @@ nav a:hover {
     background-color: rgb(225, 214, 214);
 }
 
-#main-doc header {
-    font-size: 22px;
-    color: red;
+#main-doc h4 {
+    color: rgb(0, 153, 255);
     padding: 20px;
     width: fit-content;
-    border: solid ;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
 }
 code{
     background-color: white;
-    padding: 10px;
-    margin: 10px;
+    display: block;
+    width: fit-content;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 4px;
+}
+span{
+    display: block;
 }
 section{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    padding: 30px 0;
+}
+section:not(:last-of-type){
+    border-bottom: 1px dashed rgb(0, 153, 255);
+}
+section p {
+    text-align: justify;
+    padding: 10px 0;
+    margin: 10px auto;
+    line-height: 1.7;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.second-title{
+    color: red;
+}
+.second-section{
+    background-color: #eee;
 }
 
 @media (max-width:770px){
-    nav{
-        display: none;
+    :root{
+        --width-nav:50px;
     }
+    nav{
+       width: var(--width-nav);
+    }
+
+    nav:hover{
+        width: 250px;
+    }
+    nav a {
+   
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 50px;
+        transition: .2s;
+        color: black;
+        overflow: hidden;
+    }
+    #main-doc{
+        margin-left: var(--width-nav);
+    }
+
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+ul li{
+    margin-bottom: 20px;
+    color: rgb(0, 153, 255);
+    padding: 10px;
+    background-color: wheat;
+    width: fit-content;
 }

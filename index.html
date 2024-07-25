@@ -8,24 +8,26 @@
 </head>
 <body>
     <div class="page">
-        <nav id="navbar">
-            <header><h3>JS Documentation</h3></header>
-            <a href="#Introduction" class="nav-link">Introduction</a>
-            <a href="#Variables" class="nav-link">Variables</a>
-            <a href="#Declearing_Variables" class="nav-link">Declearing Variables</a>
-            <a href="#Data_Type" class="nav-link">Data Type</a>
-            <a href="#if_else" class="nav-link">if else</a>
-            <a href="#While_Statement" class="nav-link">While Statement</a>
-            <a href="#Function_Declaration" class="nav-link">Function Declaration</a>
-            <a href="#Referance" class="nav-link">Referance</a>
+    <nav id="navbar">
+        <h3>Docs</h3>
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#Variables" class="nav-link">Variables</a>
+        <a href="#Variables" class="nav-link">Variables</a>
+        <a href="#Variables" class="nav-link">Variables</a>
+        <a href="#Variables" class="nav-link">Variables</a>
+        <a href="#Declearing_Variables" class="nav-link">Declearing Variables</a>
+        <a href="#Data_Type" class="nav-link">Data Type</a>
+        <a href="#if_else" class="nav-link">if else</a>
+        <a href="#While_Statement" class="nav-link">While Statement</a>
+        <a href="#Function_Declaration" class="nav-link">Function Declaration</a>
+        <a href="#Referance" class="nav-link">Referance</a>
+    </nav>
 
-           
-        </nav>
 
     <main id="main-doc">
-
+<h2 class="title">JavaScript Documentation</h2>
         <section class="main-section" id="Introduction">
-            <header>Introduction</header>
+            <h4>Introduction</h4>
             <p>
                 JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.
 
@@ -40,7 +42,7 @@ JavaScript contains a standard library of objects, such as Array, Date, and Math
         </section>
 
         <section class="main-section" id="Variables">
-            <header>Variables</header>
+            <h4>Variables</h4>
             <p>
                 You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.
 
@@ -51,7 +53,7 @@ You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You 
         </section>
 
         <section class="main-section" id="Declearing_Variables">
-            <header>Declearing Variables</header>
+            <h4>Declearing Variables</h4>
             <p>
                 You can declare a variable in three ways:</br>
 With the keyword var. For example,
@@ -68,12 +70,12 @@ With the keyword var. For example,
         </section>
 
         <section class="main-section" id="Data_Type">
-            <header>Data Type</header>
-            <p>
+            <h4>Data Type</h4>
+            <p class="second-title">
                 The latest ECMAScript standard defines seven data types:
             </p>
-        <ul>
-            <li><p>Six data types that are primitives:</p>
+            <div class="second-section">
+            Six data types that are primitives:
                 <ul>
                     <li>Boolean. true and false.</li>
                     <li>null. A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
@@ -82,9 +84,9 @@ With the keyword var. For example,
                     <li>String. "Howdy"</li>
                     <li>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li>
                 </ul>
-            </li>
-            <li>and Object</li>
-        </ul>
+       
+        and Object
+    </div>
         <p>
             Although these data types are a relatively small amount, they enable you to perform useful functions with your applications.
              Objects and functions are the other fundamental elements in the language.
@@ -93,20 +95,34 @@ With the keyword var. For example,
         </section>
 
         <section class="main-section" id="if_else">
-            <header>if else</header>
+            <h4>if else</h4>
             <p>
                 Use the if statement to execute a statement if a logical condition is true.
                  Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:
             </p>
-            <code>if (condition) { statement_1; } else { statement_2; }</code>
+            <code><span>if (condition) { statement_1; }</span>else { statement_2; }</code>
             <p>
                 condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false. If condition evaluates to true, 
                 statement_1 is executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be any statement, including further nested if statements.
             </p>
             <p>You may also compound the statements using else if to have multiple conditions tested in sequence, as follows:</p>
             <code>
-                if (condition_1) { statement_1; } else if (condition_2) {
-                statement_2; } else if (condition_n) { statement_n; } else {
+                <span>
+                if (condition_1) {
+                        statement_1; 
+                    } 
+                </span>
+                <span>
+                else if (condition_2) {
+                    statement_2; 
+                } 
+                </span>
+            <span>
+                else if (condition_n) {
+                    statement_n; 
+                } 
+            </span>
+                else {
                 statement_last; }
             </code>
             <p>
@@ -114,10 +130,16 @@ With the keyword var. For example,
                  group them within a block statement ({ ... }) . In general, it's good practice to always use block statements, especially when nesting if statements:
             </p>
             <code>
-                if (condition) { statement_1_runs_if_condition_is_true;
-                    statement_2_runs_if_condition_is_true; } else {
-                    statement_3_runs_if_condition_is_false;
-                    statement_4_runs_if_condition_is_false; }
+                <span>
+                if (condition) { 
+                    statement_1_runs_if_condition_is_true;
+                    <span>....</span>
+                }
+            </span>
+                     else {
+                    statement_2_runs_if_condition_is_false;
+                    <span>....</span>
+                 }
             </code>
             <p>
                 It is advisable to not use simple assignments in a conditional expression, 
@@ -128,7 +150,7 @@ With the keyword var. For example,
             <code>if ((x = y)) { /* statements here */ }</code>
         </section>
         <section class="main-section" id="While_Statement">
-            <header>While Statement</header>
+            <h4>While Statement</h4>
             <p>
                 A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows
             </p>
@@ -147,7 +169,7 @@ With the keyword var. For example,
 
             <code>var n = 0; var x = 0; while (n < 3) { n++; x += n; }</code>
 
-                <p>With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the following values:</p>
+                <p class="second-title">With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the following values:</p>
                 <ul>
                     <li>After the first pass: n = 1 and x = 1</li>
                     <li>After the second pass: n = 2 and x = 3</li>
@@ -158,8 +180,8 @@ With the keyword var. For example,
         </section>
 
         <section class="main-section" id="Function_Declaration">
-            <header>Function Declaration</header>
-            <p>
+            <h4>Function Declaration</h4>
+            <p class="second-title">
                 A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:
             </p>
             <ul>
@@ -179,7 +201,7 @@ With the keyword var. For example,
         </section>
 
         <section class="main-section" id="Referance">
-            <header>Referance</header>
+            <h4>Referance</h4>
             <p>
                 
                     All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN</a> 
